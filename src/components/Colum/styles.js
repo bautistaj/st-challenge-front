@@ -1,12 +1,17 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Wrapper = styled.header`
-    width: 300px;
-`
+	grid-column-end: span 1;
+	background-color: #eeedf3;
+	border-radius: 5px;
+	heigth: 98%;
+`;
 export const Header = styled.header`
-    background-color: #1b2838;
-    color: #FFFFFF;
-    height: 30px;
-    display: flex;
-    align-items: center;
-`
+	margin: 5px;
+	color: #4ba5e4;
+	font-weight: bold;
+	height: 30px;
+	display: flex;
+	align-items: center;
+	border-bottom: 1px solid white;
+`;
