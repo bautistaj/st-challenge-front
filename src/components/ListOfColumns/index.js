@@ -1,10 +1,15 @@
 import React from 'react';
 import { Wrapper } from './styles';
+import { Column } from "../../components/Colum";
 
-export const ListOfColumns = ({children}) => {
+export const ListOfColumns = ({hashtags}) => {
+  console.log(hashtags);
+  
   return (
     <Wrapper>
-      {children}
+      {
+        hashtags && hashtags.map(item => <Column key={item.hashtag} {...item}/>)
+      }
     </Wrapper>
   );
 }
