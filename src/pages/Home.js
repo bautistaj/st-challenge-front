@@ -1,8 +1,9 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import { HeaderComponent } from "../components/Header";
 import { Search } from "../components/Search";
 import { ListOfColumns } from "../components/ListOfColumns";
 import StyledComponents from "styled-components";
+import { HashTag } from "../components/Search/styles";
 
 const Body = StyledComponents.div`
 	background-color: white;
@@ -18,33 +19,46 @@ const Body = StyledComponents.div`
 	justify-content: center;	
 `;
 
-
 export const Home = () => {
 	const [hashtags, setHashtags] = useState([]);
 
-  useEffect(function() {
-    window.fetch(`http://localhost:3001/data`)
-    .then(result => result.json())
-    .then(response => {
-      setHashtags(response);
-    });
-	},[]);
+	useEffect(function () {
+		window
+			.fetch(`http://localhost:3001/data`)
+			.then((result) => result.json())
+			.then((response) => {
+				const hashtagsFiltered = response.filter((ht, i) => {
+					return i < 4;
+				});
+				setHashtags(response);
+			});
+	}, []);
 
 	const onSubmit = (value) => {
-		window.fetch(`http://localhost:3001/data${value ?`?hashtag=${value}`:''}`)
-		.then(result => result.json())
-		.then(response => {
-			setHashtags(response);
-		});
-	}
+		window
+			.fetch(`http://localhost:3001/data${value ? `?hashtag=${value}` : ""}`)
+			.then((result) => result.json())
+			.then((response) => {
+				if (response.length > 0) {
+					console.log("response", response);
+
+					if (hashtags.length >= 4) {
+						const hashtagsFiltered = hashtags.filter((ht, i) => {
+							return i > 0 && i < 4;
+						});
+						setHashtags(hashtagsFiltered.concat(response[0]) || []);
+					} else {
+						setHashtags(hashtags.concat(response[0]));
+					}
+				}
+			});
+	};
 
 	return (
 		<Body>
 			<HeaderComponent />
-			<Search onSubmit = { onSubmit }/>
-			{
-				hashtags && <ListOfColumns hashtags = {hashtags} />
-			}
+			<Search onSubmit={onSubmit} />
+			{hashtags && <ListOfColumns hashtags={hashtags} />}
 		</Body>
 	);
 };

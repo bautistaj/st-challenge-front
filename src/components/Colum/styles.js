@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.header`
-	grid-column-end: span 1;
+	min-width: 24.5%;
 	background-color: #eeedf3;
 	border-radius: 5px;
 	heigth: 98%;
