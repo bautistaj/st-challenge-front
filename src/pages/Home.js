@@ -3,7 +3,7 @@ import { HeaderComponent } from "../components/Header";
 import { Search } from "../components/Search";
 import { ListOfColumns } from "../components/ListOfColumns";
 import StyledComponents from "styled-components";
-import { HashTag } from "../components/Search/styles";
+import axios from "axios";
 
 const Body = StyledComponents.div`
 	background-color: white;
@@ -23,21 +23,21 @@ export const Home = () => {
 	const [hashtags, setHashtags] = useState([]);
 
 	useEffect(function () {
-		window
-			.fetch(`http://localhost:3001/data`)
-			.then((result) => result.json())
+		axios
+			.get(`http://localhost:3001/data`)
+			.then((result) => result.data)
 			.then((response) => {
 				const hashtagsFiltered = response.filter((ht, i) => {
 					return i < 4;
 				});
-				setHashtags(response);
+				setHashtags(hashtagsFiltered);
 			});
 	}, []);
 
 	const onSubmit = (value) => {
-		window
-			.fetch(`http://localhost:3001/data${value ? `?hashtag=${value}` : ""}`)
-			.then((result) => result.json())
+		axios
+			.get(`http://localhost:3001/data${value ? `?hashtag=${value}` : ""}`)
+			.then((result) => result.data)
 			.then((response) => {
 				if (response.length > 0) {
 					console.log("response", response);
