@@ -1,0 +1,206 @@
+{
+	"data": [
+		{
+			"id": 0,
+			"hashtag": "virus",
+			"tweets": [
+				{
+					"id": 0,
+					"username": "bautistaj",
+					"text": "Lorem impsun",
+					"favs": 3,
+					"retweets": 3
+				},
+				{
+					"id": 1,
+					"username": "camposb",
+					"text": "Lorem impsun",
+					"favs": 3,
+					"retweets": 3
+				},
+				{
+					"id": 2,
+					"username": "camposb",
+					"text": "Lorem impsun",
+					"favs": 3,
+					"retweets": 3
+				}
+			]
+		},
+		{
+			"id": 1,
+			"hashtag": "dev",
+			"tweets": [
+				{
+					"id": 0,
+					"username": "camposb",
+					"text": "Lorem impsun",
+					"favs": 3,
+					"retweets": 3
+				},
+				{
+					"id": 1,
+					"username": "bautistaj",
+					"text": "Lorem impsun",
+					"favs": 3,
+					"retweets": 3
+				}
+			]
+		},
+		{
+			"id": 2,
+			"hashtag": "Colombia",
+			"tweets": [
+				{
+					"id": 0,
+					"username": "bautistaj",
+					"text": "Lorem impsun",
+					"favs": 3,
+					"retweets": 3
+				},
+				{
+					"id": 1,
+					"username": "bautistaj",
+					"text": "Lorem impsun",
+					"favs": 3,
+					"retweets": 3
+				},
+				{
+					"id": 2,
+					"username": "bautistaj",
+					"text": "Lorem impsun",
+					"favs": 3,
+					"retweets": 3
+				}
+			]
+		},
+		{
+			"id": 3,
+			"hashtag": "platzi",
+			"tweets": [
+				{
+					"id": 0,
+					"username": "bautistaj",
+					"text": "Lorem impsun",
+					"favs": 3,
+					"retweets": 3
+				},
+				{
+					"id": 1,
+					"username": "bautistaj",
+					"text": "Lorem impsun",
+					"favs": 3,
+					"retweets": 3
+				},
+				{
+					"id": 2,
+					"username": "bautistaj",
+					"text": "Lorem impsun",
+					"favs": 3,
+					"retweets": 3
+				}
+			]
+		},
+		{
+			"id": 4,
+			"hashtag": "usa",
+			"tweets": [
+				{
+					"id": 0,
+					"username": "bautistaj",
+					"text": "Lorem impsun",
+					"favs": 3,
+					"retweets": 3
+				},
+				{
+					"id": 1,
+					"username": "camposb",
+					"text": "Lorem impsun",
+					"favs": 3,
+					"retweets": 3
+				},
+				{
+					"id": 2,
+					"username": "camposb",
+					"text": "Lorem impsun",
+					"favs": 3,
+					"retweets": 3
+				}
+			]
+		},
+		{
+			"id": 5,
+			"hashtag": "develop",
+			"tweets": [
+				{
+					"id": 0,
+					"username": "camposb",
+					"text": "Lorem impsun",
+					"favs": 3,
+					"retweets": 3
+				},
+				{
+					"id": 1,
+					"username": "bautistaj",
+					"text": "Lorem impsun",
+					"favs": 3,
+					"retweets": 3
+				}
+			]
+		},
+		{
+			"id": 6,
+			"hashtag": "spain",
+			"tweets": [
+				{
+					"id": 0,
+					"username": "bautistaj",
+					"text": "Lorem impsun",
+					"favs": 3,
+					"retweets": 3
+				},
+				{
+					"id": 1,
+					"username": "bautistaj",
+					"text": "Lorem impsun",
+					"favs": 3,
+					"retweets": 3
+				},
+				{
+					"id": 2,
+					"username": "bautistaj",
+					"text": "Lorem impsun",
+					"favs": 3,
+					"retweets": 3
+				}
+			]
+		},
+		{
+			"id": 7,
+			"hashtag": "conf",
+			"tweets": [
+				{
+					"id": 0,
+					"username": "bautistaj",
+					"text": "Lorem impsun",
+					"favs": 3,
+					"retweets": 3
+				},
+				{
+					"id": 1,
+					"username": "bautistaj",
+					"text": "Lorem impsun",
+					"favs": 3,
+					"retweets": 3
+				},
+				{
+					"id": 2,
+					"username": "bautistaj",
+					"text": "Lorem impsun",
+					"favs": 3,
+					"retweets": 3
+				}
+			]
+		}
+	]
+}

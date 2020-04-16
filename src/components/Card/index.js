@@ -1,21 +1,20 @@
 import React from "react";
 import { Header, Wrapper, Content, Ul, Tweet } from "./styles";
 
-export const Card = () => {
+export const Card = ({username, text, favs, retweets}) => {
 	return (
 		<Wrapper>
-			<Header>User name</Header>
+			<Header>{username}</Header>
 			<Content>
 				<Tweet>
-					Lorem Ipsum is simply dummy text of the printing and typesetting
-					industry
+					{text}
 				</Tweet>
 				<Ul>
 					<li>
-						<strong>Favs:</strong> 5
+						<strong>Favs:</strong> {favs}
 					</li>
 					<li>
-						<strong>Retweets:</strong> 3
+						<strong>Retweets:</strong> {retweets}
 					</li>
 				</Ul>
 			</Content>

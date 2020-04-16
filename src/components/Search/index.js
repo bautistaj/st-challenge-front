@@ -2,12 +2,13 @@ import React from "react";
 import { HashTag, Input, Form, Button, InputContainer } from "./styles";
 import { useInputValue } from "../../hooks/useImputValue";
 
-export const Search = () => {
+export const Search = ({ onSubmit }) => {
 	const hashtag = useInputValue("");
 
-	const handleSubmit = event => {
+	const handleSubmit = (event) => {
+		hashtag.setValue("");
 		event.preventDefault();
-		console.log("Buscar ", hashtag.value);
+		onSubmit(hashtag.value);
 	};
 
 	return (
@@ -15,7 +16,7 @@ export const Search = () => {
 			<Form onSubmit={handleSubmit}>
 				<InputContainer>
 					<HashTag>#</HashTag>
-					<Input placeholder="buscar" {...hashtag} />
+					<Input placeholder="buscar" {...hashtag} required/>
 					<Button></Button>
 				</InputContainer>
 			</Form>
