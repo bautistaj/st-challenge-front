@@ -6,7 +6,6 @@ export const Search = ({ onSubmit }) => {
 	const hashtag = useInputValue("");
 
 	const handleSubmit = (event) => {
-		console.log("submit", hashtag);
 		hashtag.setValue("");
 		event.preventDefault();
 		onSubmit(hashtag.value);
@@ -17,7 +16,7 @@ export const Search = ({ onSubmit }) => {
 			<Form onSubmit={handleSubmit}>
 				<InputContainer>
 					<HashTag>#</HashTag>
-					<Input placeholder="buscar" {...hashtag} />
+					<Input placeholder="buscar" {...hashtag} required/>
 					<Button></Button>
 				</InputContainer>
 			</Form>
